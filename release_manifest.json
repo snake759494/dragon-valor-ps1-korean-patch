@@ -1,0 +1,48 @@
+{
+  "version": "v1.0",
+  "game": "Dragon Valor (Japan) SLPS-02190/02191",
+  "patches": [
+    {
+      "xdelta": "Dragon_Valor_KO_v1.0_Disc1.xdelta",
+      "xdelta_hash": {
+        "size": 3348764,
+        "md5": "96ca38424adfbe75f1f22571fc148147",
+        "sha1": "3b3cf03398a1d6b3e4d128ecfe1d3afa971b7bfa",
+        "sha256": "26ca26a80e835328f25bb89d14bc90620676194ffd758f5864f75d1165d2b50d"
+      },
+      "source": {
+        "size": 635228160,
+        "md5": "446c789aae42e95bc8056597d65b1f7c",
+        "sha1": "82f33fd5f1c69c8e61de9e5f5645c9f722480615",
+        "sha256": "bf8d8eb6b1e8f6131aa2ba5e17aaee71d7f2e3f256c2df4c658d9832699309a1"
+      },
+      "result": {
+        "size": 635228160,
+        "md5": "8d25387c3e53c88749e217e6cf072c6e",
+        "sha1": "c8ef2517a74513afaa9a1e7fb67c11e8a13f9065",
+        "sha256": "ba74adb75a7a1b9e4246db5659c1d3b8423a0928f6e5775b39ae0912fd8f66d1"
+      }
+    },
+    {
+      "xdelta": "Dragon_Valor_KO_v1.0_Disc2.xdelta",
+      "xdelta_hash": {
+        "size": 3398304,
+        "md5": "d9a726690c6b5795c6641abb9d866090",
+        "sha1": "668f9bd23b32ce94e7c24c33f1265a6e981c5f68",
+        "sha256": "27ed55cac006165d03e70ad435f1cb04a0e744aca70e0abf5b5f3b30353bbc7b"
+      },
+      "source": {
+        "size": 700801920,
+        "md5": "a1cf16b83cb39230b800eda2210c6f79",
+        "sha1": "e905099892a6cebeee9ad838894b02c182b44bf3",
+        "sha256": "09b08528990f972b2651ebb925779bff60a2cdd84bd0fecdaee309a108dca055"
+      },
+      "result": {
+        "size": 700801920,
+        "md5": "922b7dd27eef23238767532bad17dd50",
+        "sha1": "f9f4841e240718bdd606eb60713ff30aeb032a5d",
+        "sha256": "2bacabbfaca1b0f2370a242c7e0affff12e555843478e48320b9cb3273a91718"
+      }
+    }
+  ]
+}
