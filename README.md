@@ -14,8 +14,8 @@ PS1 일본판 **ドラゴンヴァラー (드래곤 밸러, SLPS-02190/02191, 2�
 2. xdeltaUI 같은 도구로 디스크마다 xdelta를 적용합니다. (Patch = xdelta, Source File = 원본 BIN, Output File = 새 파일명)
    - 명령줄:
      ```
-     xdelta3 -d -s "Dragon Valor (Japan) (Disc 1).bin" Dragon_Valor_KO_v1.0_Disc1.xdelta "Dragon Valor (Korean) (Disc 1).bin"
-     xdelta3 -d -s "Dragon Valor (Japan) (Disc 2).bin" Dragon_Valor_KO_v1.0_Disc2.xdelta "Dragon Valor (Korean) (Disc 2).bin"
+     xdelta3 -d -s "Dragon Valor (Japan) (Disc 1).bin" Dragon_Valor_KO_v1.1_Disc1.xdelta "Dragon Valor (Korean) (Disc 1).bin"
+     xdelta3 -d -s "Dragon Valor (Japan) (Disc 2).bin" Dragon_Valor_KO_v1.1_Disc2.xdelta "Dragon Valor (Korean) (Disc 2).bin"
      ```
 3. 원본 `.cue` 를 복사해 이름을 바꾸고 `FILE "..."` 줄을 새 `.bin` 파일명으로 고칩니다.
 4. 만들어진 `.cue` 를 DuckStation 등 PS1 에뮬레이터나 ODE 장치에서 실행합니다.
@@ -25,17 +25,17 @@ PS1 일본판 **ドラゴンヴァラー (드래곤 밸러, SLPS-02190/02191, 2�
 | 원본 BIN 크기 | 635,228,160 바이트 | 700,801,920 바이트 |
 | 원본 BIN MD5 | `446c789aae42e95bc8056597d65b1f7c` | `a1cf16b83cb39230b800eda2210c6f79` |
 | 원본 BIN SHA-1 | `82f33fd5f1c69c8e61de9e5f5645c9f722480615` | `e905099892a6cebeee9ad838894b02c182b44bf3` |
-| xdelta 크기 | 3,348,764 바이트 | 3,398,304 바이트 |
-| xdelta SHA-256 | `26ca26a80e835328f25bb89d14bc90620676194ffd758f5864f75d1165d2b50d` | `27ed55cac006165d03e70ad435f1cb04a0e744aca70e0abf5b5f3b30353bbc7b` |
-| 결과 BIN MD5 | `8d25387c3e53c88749e217e6cf072c6e` | `922b7dd27eef23238767532bad17dd50` |
-| 결과 BIN SHA-256 | `ba74adb75a7a1b9e4246db5659c1d3b8423a0928f6e5775b39ae0912fd8f66d1` | `2bacabbfaca1b0f2370a242c7e0affff12e555843478e48320b9cb3273a91718` |
+| xdelta 크기 | 3,653,620 바이트 | 3,714,961 바이트 |
+| xdelta SHA-256 | `212062d17606a4cc563b8b87701e8d7a04fa2bebe1df90e171e004f71786687a` | `6cdfd514be839ead5795940efcb8963f5a54aee228eced74a129e3e13f165090` |
+| 결과 BIN MD5 | `556ac423928e73edbe4fa88221655900` | `c183ca79997adb96a0fe58b5077ea1fd` |
+| 결과 BIN SHA-256 | `bb68aede96275bf9188ffdac96079a0e1ef42deb91de538af65a0c608e8314c5` | `0371c12d8e31b6f01838d0d7adccccdf504198c12892ddad1e35cce96da19534` |
 
 ## 주의
 - 원본에서 만든 **상태저장(세이브 스테이트)** 은 불러오지 마세요. 글꼴 배치가 달라 글자가 깨집니다. 메모리 카드 세이브는 그대로 쓸 수 있습니다.
 - xdelta는 압축하지 않은 형식입니다(디스크당 약 3.4MB).
 
 ## 한글화 내용
-- 이벤트 대사·화자 이름·선택지·튜토리얼·장 사이 스크롤 문장 등 고유 문장 **1,980개 전체** 직접 번역 (양 디스크 3,331개 항목)
+- 이벤트 대사·화자 이름·선택지·튜토리얼·장 사이 스크롤 문장 등 고유 문장 **1,980개 전체** 직접 번역 + 글꼴 대응이 없던 숨은 대사 18개 (양 디스크 3,349개 항목)
 - 아이템·마법 설명문 201종, 메모리 카드 메시지, 후계자 이름 9명, 게임오버 컨티뉴·세이브 확인 문구
 - 글꼴: 갈무리11 원래 크기(12px)로 고정 글꼴 한글 308자 + 장면별 한자 페이지 193장에 장면에 필요한 음절 배치
 - 그림 글자: 장 제목 카드 13장, 지역명 92종, 월드맵 장·스테이지 목록 13종, 가계도 이름표 11장, 설정 메뉴(컨트롤러·화면 위치·사운드), 디스크 교체 안내
@@ -45,7 +45,7 @@ PS1 일본판 **ドラゴンヴァラー (드래곤 밸러, SLPS-02190/02191, 2�
 ## 그대로 둔 것
 - 원래 영문인 그래픽(PAUSE, GAME OVER, ENEMY, 메뉴 MAGIC/ITEMS, 지역명 영문 부제 등)
 - 오프닝 동영상의 음악 (대사 음성 없음)
-- 개발용으로 남은 미사용 문자열(DUMMY 등)과 어느 글꼴 페이지에도 맞지 않는 미사용 대사 블록
+- 개발용으로 남은 미사용 문자열(DUMMY 등)
 
 ## 검증 범위
 DuckStation 호환 코어(mednafen)에서 오프닝 동영상, 타이틀, 로드 화면, 설정 메뉴 전체, 프롤로그 스크롤, 드래곤 대화, 첫 스테이지 튜토리얼과 대사, 메뉴의 마법·아이템 설명, 게임오버 컨티뉴 화면, 디스크 2 데모를 확인했습니다. 월드맵·가계도·상점 화면은 디스크에 들어간 텍스처를 렌더링해 확인했고, 게임 안에서 해당 장면을 띄워 보지는 못했습니다. 전체 플레이 검증은 하지 않았습니다. 문제를 발견하면 Issues에 알려 주세요.

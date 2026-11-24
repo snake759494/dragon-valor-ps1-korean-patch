@@ -234,6 +234,12 @@ def load_items():
         if not t.get('orphan') and t['jp'] in idx and idx[t['jp']] in ko:
             t['ko'] = ko[idx[t['jp']]]
             t['uid'] = idx[t['jp']]
+    op = os.path.join(W, 'orphan_ko.json')
+    if os.path.exists(op):
+        O = json.load(open(op, encoding='utf-8'))
+        for t in T:
+            k = '%d:%d:%d' % (t['disc'], t['sec'], t['ent'])
+            if k in O: t['ko'] = O[k]; t['fixed_only'] = True; t['uid'] = -1
     return T
 
 def load_sys():
@@ -247,6 +253,10 @@ def plan(T, sysk):
             for ch in chars_of(t['ko']):
                 if is_hangul(ch): freq[ch] += 1
     must = set()
+    for t in T:
+        if t.get('fixed_only'):
+            for ch in chars_of(t['ko']):
+                if is_hangul(ch): must.add(ch)
     for v in load_desc_ko().values():
         for ch in chars_of(desc_to_text(v)):
             if is_hangul(ch): must.add(ch)
@@ -264,7 +274,7 @@ def plan(T, sysk):
         for t in T:
             if t['disc'] == disc and t['ko']:
                 for ch in chars_of(t['ko']):
-                    if is_hangul(ch) and ch not in fixed_map: need[t['font']].add(ch)
+                    if is_hangul(ch) and ch not in fixed_map and not t.get('fixed_only'): need[t['font']].add(ch)
         for j, chs in need.items():
             chs = sorted(chs, key=lambda c: -freq[c])
             if len(chs) > 441:
@@ -309,7 +319,7 @@ def rebuild_data(disc, T, fixed_map, pages, report):
             if t.get('desc'):
                 ents[t['ent']] = rebuild_desc(ents[t['ent']], dko, Enc(fixed_map, {}))
                 continue
-            enc = Enc(fixed_map, pages.get((disc, t['font']), {}))
+            enc = Enc(fixed_map, {} if t.get('fixed_only') else pages.get((disc, t['font']), {}))
             codes = enc.encode(t['ko'], t['kind'])
             t['newpx'] = max_line_px(enc, t['ko'])
             ents[t['ent']] = struct.pack('<%dH' % len(codes), *codes)
